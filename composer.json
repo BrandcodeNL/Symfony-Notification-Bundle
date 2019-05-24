@@ -1,0 +1,14 @@
+{
+    "name": "brandcodenl/notification-bundle",
+    "description": "A simple notification bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+      
+    },
+    "autoload": {
+        "psr-4": {
+            "BrandcodeNL\\NotificationBundle\\" : ""
+        }
+    }
+}
