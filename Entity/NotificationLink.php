@@ -14,7 +14,7 @@ class NotificationLink
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity="BrandcodeNL\NotificationBundle\Entity\Notification", inversedBy="notificationLink")
+     * @ORM\ManyToOne(targetEntity="BrandcodeNL\NotificationBundle\Model\NotificationInterface", inversedBy="notificationLink")
      * @ORM\JoinColumn(name="notification_id", referencedColumnName="id")
      */
     private $notification;
