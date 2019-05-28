@@ -30,6 +30,11 @@ class Notification
      * @ORM\Column(type="datetime")
      */
     private $startDate;
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Notification\NotificationLink", mappedBy="notification")
+     */
+    private $notificationLink;
+    
 
     public function getId(): ?int
     {
@@ -66,5 +71,18 @@ class Notification
     {
         $this->startDate = $startDate;
         return $this;
+    }
+    public function getNotificationLink()
+    {
+        return $this->notificationLink;
+    }
+    public function setNotificationLink($notificationLink): self
+    {
+        $this->notificationLink = $notificationLink;
+        return $this;
+    }
+    public function addNotificationLink($notificationLink): self
+    {
+        array_push($this->notificationLink, $notificationLink);
     }
 }
