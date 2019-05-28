@@ -16,8 +16,8 @@ class Configuration implements ConfigurationInterface
         
         $rootNode
             ->children()
-                ->integerNode('max_read_notifications')
-                ->integerNode('max_unread_notifications')
+                ->scalarNode('max_read_notifications')->end()
+                ->scalarNode('max_unread_notifications')->end()
             ->end()
         ;
         
