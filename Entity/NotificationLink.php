@@ -7,7 +7,7 @@ use BrandcodeNL\NotificationBundle\Entity\Notification;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="BrandcodeNL\NotificationBundle\Repository\NotificationLinkRepository")
  */
 class NotificationLink
 {

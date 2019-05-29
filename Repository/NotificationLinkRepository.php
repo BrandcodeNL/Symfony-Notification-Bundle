@@ -5,15 +5,15 @@ namespace BrandcodeNL\NotificationBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
-class NotificationRepository extends EntityRepository
+class NotificationLinkRepository extends EntityRepository
 {
 
-    public function findNotifications($user, $read)
+    public function findNotificationLinks($user, $read)
     {
-        $notifications = $this->createQueryBuilder("n");
+        $notifications = $this->createQueryBuilder("l");
 
         $notifications
-            ->leftJoin("n.notificationLink", 'l')
+            ->leftJoin("l.notification", 'n')
             ->andWhere("l.readStatus = :read")
             ->andWhere("l.user = :userId")
             ->andWhere("n.startDate < :date")
