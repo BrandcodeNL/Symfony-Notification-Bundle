@@ -6,6 +6,7 @@ namespace BrandcodeNL\NotificationBundle\DependencyInjection;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\Config\FileLocator;
 
 class BrandcodeNLNotificationExtension extends extension
 {
