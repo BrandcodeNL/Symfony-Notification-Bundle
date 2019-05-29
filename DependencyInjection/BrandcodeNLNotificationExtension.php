@@ -13,16 +13,11 @@ class BrandcodeNLNotificationExtension extends extension
 
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader(
-            $container, 
-            new FileLocator(__DIR__.'/../Resources/Config')
-        );
-        
-        $loader->load('config.yml');
-        
         $configuration = new Configuration();
-        
         $config = $this->processConfiguration($configuration, $configs);
+
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/Config'));
+        $loader->load('config.yml');
     }
-    
+
 }

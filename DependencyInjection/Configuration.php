@@ -8,20 +8,13 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
-        
+
     public function getConfigTreeBuilder()
     {
         $treebuilder = new TreeBuilder();
         $rootNode = $treebuilder->root('brandcodenl_notification');
-        
-        $rootNode
-            ->children()
-                ->scalarNode('max_read_notifications')->end()
-                ->scalarNode('max_unread_notifications')->end()
-            ->end()
-        ;
-        
+
         return $treebuilder;
     }
-    
+
 }

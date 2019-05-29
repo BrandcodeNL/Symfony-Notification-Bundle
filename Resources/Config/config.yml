@@ -1,8 +1,0 @@
-Twig:
-    paths:
-        '%kernel.project_dir%/vendor/brandcodenl/symfony-notification-bundle/Resources/Views': notification_bundle
-        '%kernel.project_dir%/vendor/brandcodenl/symfony-notification-bundle/Resources': notification_bundle
-
-services: 
-    BrandcodeNL\Resources\Twig: 
-        resource: '../Twig/*'
