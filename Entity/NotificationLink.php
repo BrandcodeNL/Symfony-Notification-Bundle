@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BrandcodeNL\NotificationBundle\Entity;
+namespace BrandcodeNL\SymfonyNotificationBundle\Entity;
 
 use BrandcodeNL\NotificationBundle\Entity\Notification;
 use Doctrine\ORM\Mapping as ORM;

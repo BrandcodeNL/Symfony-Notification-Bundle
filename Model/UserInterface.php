@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BrandcodeNL\NotificationBundle\Model;
+namespace BrandcodeNL\SymfonyNotificationBundle\Model;
 
 
 interface UserInterface

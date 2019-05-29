@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BrandcodeNL\NotificationBundle\Twig;
+namespace BrandcodeNL\SymfonyNotificationBundle\Twig;
 
 use BrandcodeNL\NotificationBundle\Entity\NotificationLink;
 use Doctrine\ORM\EntityManagerInterface;

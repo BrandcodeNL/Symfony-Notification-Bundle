@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BrandcodeNL\NotificationBundle\DependencyInjection;
+namespace BrandcodeNL\SymfonyNotificationBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;

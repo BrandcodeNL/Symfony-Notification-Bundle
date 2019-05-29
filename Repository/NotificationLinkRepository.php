@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BrandcodeNL\NotificationBundle\Repository;
+namespace BrandcodeNL\SymfonyNotificationBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
