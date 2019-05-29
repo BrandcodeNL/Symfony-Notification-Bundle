@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AppBundle\Twig;
+namespace BrandcodeNL\NotificationBundle\Twig;
 
 use BrandcodeNL\NotificationBundle\Entity\NotificationLink;
 use Doctrine\ORM\EntityManagerInterface;
@@ -10,7 +10,7 @@ use Twig\TwigFunction;
 use Twig\Extension\AbstractExtension;
 
 
-class NotificationExtension extends AbstractExtension
+class NotificationLinkExtension extends AbstractExtension
 {
 
     private $entityManager;
