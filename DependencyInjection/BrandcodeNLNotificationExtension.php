@@ -17,7 +17,7 @@ class BrandcodeNLNotificationExtension extends extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/Config'));
-        $loader->load('config.yml');
+        $loader->load('services.yml');
     }
 
 }
