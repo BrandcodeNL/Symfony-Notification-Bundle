@@ -3,24 +3,24 @@
 
 namespace BrandcodeNL\SymfonyNotificationBundle\Entity;
 
-use BrandcodeNL\NotificationBundle\Entity\Notification;
+use BrandcodeNL\SymfonyNotificationBundle\Entity\Notification;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="BrandcodeNL\NotificationBundle\Repository\NotificationLinkRepository")
+ * @ORM\Entity(repositoryClass="BrandcodeNL\SymfonyNotificationBundle\Repository\NotificationLinkRepository")
  */
 class NotificationLink
 {
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity="BrandcodeNL\NotificationBundle\Entity\Notification")
+     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Entity\Notification")
      */
     private $notification;
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity="BrandcodeNL\NotificationBundle\Model\UserInterface")
+     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\UserInterface")
      */
     private $user;
 

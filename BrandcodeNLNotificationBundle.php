@@ -1,6 +1,6 @@
 <?php
 
-namespace BrandcodeNL\NotificationBundle;
+namespace BrandcodeNL\SymfonyNotificationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

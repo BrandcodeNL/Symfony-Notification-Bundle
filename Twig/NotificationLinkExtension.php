@@ -3,7 +3,7 @@
 
 namespace BrandcodeNL\SymfonyNotificationBundle\Twig;
 
-use BrandcodeNL\NotificationBundle\Entity\NotificationLink;
+use BrandcodeNL\SymfonyNotificationBundle\Entity\NotificationLink;
 use Doctrine\ORM\EntityManagerInterface;
 use Twig\TwigFunction;
 
