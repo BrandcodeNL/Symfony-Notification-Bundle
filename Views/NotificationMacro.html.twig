@@ -1,0 +1,7 @@
+{% macro notification(notificationLink, maxRead, maxUnread) %}
+
+<a href="{% if notificationLink.notification.link is not null%}{{ notificationLink.notification.link }}{% else %}#{% endif %}">
+    <div class="notification">
+        <h5>{{notificationLink.notification.title}}</h5>        
+    </div>
+</a>

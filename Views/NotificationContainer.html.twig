@@ -1,0 +1,20 @@
+{% import 'NotificationMacro.html.twig' as macro %}
+
+
+<a class="notification-icon" href="#">
+    <div class="notification-set-read">
+        <i class="material-icons">notifications</i>
+        {% if app.user and getNotifications(app.user, false)|length is not same as(0)%}
+            <span class="notificationCounter">{{ getNotifications(app.user, false)|length }}</span>
+        {% endif %}
+    </div>
+</a>
+<div class="notification-container">
+    {% for notification in getNotifications(app.user, false) %}
+        {{ macro.notification(notification)}}
+    {% endfor %}
+    <hr>
+    {% for notification in getNotifications(app.user, true) %}
+        {{ macro.notification(notification)}}
+    {% endfor %}
+</div>
