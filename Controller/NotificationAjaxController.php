@@ -16,8 +16,9 @@ class NotificationAjaxController extends Controller
     /**
      * @Route("/notification/ajax/read/all", name="notification_ajax_read_all", options={ "expose" = true })
      */
-    public function setAllNotificationRead(EntityManagerInterface $manager): JsonResponse
+    public function setAllNotificationRead()
     {
+        $manager = $this->getDoctrine()->getManager();
         $unread = $manager->getRepository(NotificationLink::class)->findNotificationLinks($this->getUser(), false);
         foreach ($unread as $notification) {
             $notification->setReadStatus(true);
@@ -35,8 +36,9 @@ class NotificationAjaxController extends Controller
     /**
      * @Route("/notification/ajax/read/{id}", name="notification_ajax_read", options={ "expose" = true })
      */
-    public function setNotificationRead(EntityManagerInterface $manager, $id)
+    public function setNotificationRead($id)
     {
+        $manager = $this->getDoctrine()->getManager();
         $notification = $manager->getRepository(NotificationLink::class)->findOneById($id);
         $notification->addReadNotification($this->getUser());
         $manager->flush();

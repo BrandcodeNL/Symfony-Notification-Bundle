@@ -17,3 +17,23 @@
         {{ macro.notification(notification)}}
     {% endfor %}
 </div>
+
+<script>
+    var done = false;
+    $( document ).ready(function() {
+        if (!done) {
+            $('.notification-set-read').on('click', function () {
+                let url = Routing.generate('notification_ajax_read_all');
+                $.ajax({
+                    url: url,
+                    method: "POST",
+                    success: function (response) {
+                        $(".notificationCounter").remove();
+                        $(".notification-content").html(response["html"]);
+                    }
+                });
+            });
+            done = true;
+        }
+    });
+</script>
