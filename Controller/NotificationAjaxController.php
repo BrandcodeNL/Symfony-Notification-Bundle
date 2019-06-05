@@ -9,7 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class NotificationAjaxController extends BaseController
+class NotificationAjaxController extends Controller
 {
 
     /**
