@@ -1,5 +1,7 @@
 # Symfony-Notification-Bundle
 
+This bundle houses some default resources for managing and displaying facebook style notifications on your website.
+
 The first step to using this bundle is to extend the notification entity in this bundle
 
 ```php
@@ -9,9 +11,6 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use BrandcodeNL\SymfonyNotificationBundle\Entity\Notification as BaseNotification;
 
-/**
- * @ORM\Entity(repositoryClass="AppBundle\Repository\UserNotificationRepository")
- */
 class Notification extends BaseNotification
 {
 }
