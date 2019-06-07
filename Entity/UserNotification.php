@@ -7,9 +7,9 @@ use BrandcodeNL\SymfonyNotificationBundle\Entity\Notification;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="BrandcodeNL\SymfonyNotificationBundle\Repository\NotificationLinkRepository")
+ * @ORM\Entity(repositoryClass="BrandcodeNL\SymfonyNotificationBundle\Repository\UserNotificationRepository")
  */
-class NotificationLink
+class UserNotification
 {
 
     /**
@@ -20,7 +20,7 @@ class NotificationLink
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\UserInterface")
+     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\UserNotificationInterface")
      */
     private $user;
 

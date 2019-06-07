@@ -1,6 +1,6 @@
-{% import '@notification_bundle/NotificationMacro.html.twig' as macro %}
+{% import '@brandcodenl_notification_bundle/NotificationMacro.html.twig' as macro %}
 
-<a class="notification-icon" href="#">
+<a class="notification-icon" href="{{ path('notification_ajax_read_all') }}">
     <div class="notification-set-read">
         <i class="material-icons">notifications</i>
         {% if app.user and getNotifications(app.user, false)|length is not same as(0)%}
@@ -13,27 +13,7 @@
         {{ macro.notification(notification)}}
     {% endfor %}
     <hr>
-    {% for notification in getNotifications(app.user, true) %}
+    {% for notification in getNotifications(app.user, true, 10) %}
         {{ macro.notification(notification)}}
     {% endfor %}
 </div>
-
-<script>
-    var done = false;
-    $( document ).ready(function() {
-        if (!done) {
-            $('.notification-set-read').on('click', function () {
-                let url = Routing.generate('notification_ajax_read_all');
-                $.ajax({
-                    url: url,
-                    method: "POST",
-                    success: function (response) {
-                        $(".notificationCounter").remove();
-                        $(".notification-content").html(response["html"]);
-                    }
-                });
-            });
-            done = true;
-        }
-    });
-</script>

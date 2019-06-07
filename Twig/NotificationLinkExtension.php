@@ -3,14 +3,14 @@
 
 namespace BrandcodeNL\SymfonyNotificationBundle\Twig;
 
-use BrandcodeNL\SymfonyNotificationBundle\Entity\NotificationLink;
+use BrandcodeNL\SymfonyNotificationBundle\Entity\UserNotification;
 use Doctrine\ORM\EntityManagerInterface;
 use Twig\TwigFunction;
 
 use Twig\Extension\AbstractExtension;
 
 
-class NotificationLinkExtension extends AbstractExtension
+class UserNotificationExtension extends AbstractExtension
 {
 
     private $entityManager;
@@ -30,6 +30,6 @@ class NotificationLinkExtension extends AbstractExtension
 
     public function getNotifications($user, $read)
     {
-        return $this->entityManager->getRepository(NotificationLink::class)->findNotificationLinks($user, $read);
+        return $this->entityManager->getRepository(UserNotification::class)->findUserNotifications($user, $read);
     }
 }

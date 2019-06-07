@@ -6,6 +6,9 @@
     "require": {
       
     },
+    "require": {
+        "symfony/symfony": "^3.4|^4.0"
+    },
     "autoload": {
         "psr-4": {
             "BrandcodeNL\\SymfonyNotificationBundle\\" : ""

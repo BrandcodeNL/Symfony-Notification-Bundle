@@ -1,6 +1,6 @@
 services:
     brandcode_nl_symfony_notification_bundle.notification_extension:
-        class: BrandcodeNL\SymfonyNotificationBundle\Twig\NotificationLinkExtension
+        class: BrandcodeNL\SymfonyNotificationBundle\Twig\UserNotificationExtension
         public: false
         arguments: ['@doctrine.orm.entity_manager']
         tags:

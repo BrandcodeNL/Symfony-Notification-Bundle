@@ -5,10 +5,10 @@ namespace BrandcodeNL\SymfonyNotificationBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
-class NotificationLinkRepository extends EntityRepository
+class UserNotificationRepository extends EntityRepository
 {
 
-    public function findNotificationLinks($user, $read)
+    public function findUserNotifications($user, $read, $limit = null)
     {
         $notifications = $this->createQueryBuilder("l");
 
@@ -22,8 +22,8 @@ class NotificationLinkRepository extends EntityRepository
             ->setParameter("read", $read)
             ->orderBy('n.startDate', 'DESC')
         ;
-        if ($read) {
-            $notifications->setMaxResults(10);
+        if ($limit !== null) {
+            $notifications->setMaxResults($limit);
         }        
         return $notifications->getQuery()->getResult();
     }

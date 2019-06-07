@@ -4,6 +4,6 @@
 namespace BrandcodeNL\SymfonyNotificationBundle\Model;
 
 
-interface UserInterface
+interface UserNotificationInterface
 {
 }

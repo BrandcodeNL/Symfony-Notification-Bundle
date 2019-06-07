@@ -4,13 +4,13 @@
 namespace BrandcodeNL\SymfonyNotificationBundle\Controller;
 
 
-use BrandcodeNL\SymfonyNotificationBundle\Entity\NotificationLink;
+use BrandcodeNL\SymfonyNotificationBundle\Entity\UserNotification;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class NotificationAjaxController extends Controller
+class NotificationAjaxController extends AbstractController
 {
 
     /**
@@ -19,7 +19,7 @@ class NotificationAjaxController extends Controller
     public function setAllNotificationRead()
     {
         $manager = $this->getDoctrine()->getManager();
-        $unread = $manager->getRepository(NotificationLink::class)->findNotificationLinks($this->getUser(), false);
+        $unread = $manager->getRepository(UserNotification::class)->findUserNotifications($this->getUser(), false);
         foreach ($unread as $notification) {
             $notification->setReadStatus(true);
         }
@@ -39,7 +39,7 @@ class NotificationAjaxController extends Controller
     public function setNotificationRead($id)
     {
         $manager = $this->getDoctrine()->getManager();
-        $notification = $manager->getRepository(NotificationLink::class)->findOneById($id);
+        $notification = $manager->getRepository(UserNotification::class)->findOneById($id);
         $notification->addReadNotification($this->getUser());
         $manager->flush();
 
