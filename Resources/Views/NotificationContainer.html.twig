@@ -1,6 +1,6 @@
 {% import '@brandcodenl_notification_bundle/NotificationMacro.html.twig' as macro %}
 
-<a class="notification-icon" href="{{ path('notification_ajax_read_all') }}">
+<a class="notification-icon" href="{{ path('notification_read_all') }}">
     <div class="notification-set-read">
         <i class="material-icons">notifications</i>
         {% if app.user and getNotifications(app.user, false)|length is not same as(0)%}

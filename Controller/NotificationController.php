@@ -5,17 +5,16 @@ namespace BrandcodeNL\SymfonyNotificationBundle\Controller;
 
 
 use BrandcodeNL\SymfonyNotificationBundle\Entity\UserNotification;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class NotificationAjaxController extends AbstractController
+class NotificationController extends AbstractController
 {
 
     /**
-     * @Route("/notification/ajax/read/all", name="notification_ajax_read_all", options={ "expose" = true })
+     * @Route("/notification/read/all", name="notification_read_all")
      */
     public function setAllNotificationRead(Request $request)
     {
@@ -30,7 +29,7 @@ class NotificationAjaxController extends AbstractController
     }
 
     /**
-     * @Route("/notification/ajax/read/{id}", name="notification_ajax_read", options={ "expose" = true })
+     * @Route("/notification/read/{id}", name="notification_read")
      */
     public function setNotificationRead(Request $request, $id)
     {

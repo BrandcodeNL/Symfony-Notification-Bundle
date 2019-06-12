@@ -4,11 +4,12 @@ namespace BrandcodeNL\SymfonyNotificationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use BrandcodeNL\SymfonyNotificationBundle\Model\NotificationInterface;
 
 /**
  * @ORM\MappedSuperclass()
  */
-class Notification
+class Notification implements NotificationInterface
 {
     /**
      * @ORM\Id
