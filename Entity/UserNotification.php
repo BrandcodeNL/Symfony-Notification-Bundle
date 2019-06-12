@@ -5,11 +5,12 @@ namespace BrandcodeNL\SymfonyNotificationBundle\Entity;
 
 use BrandcodeNL\SymfonyNotificationBundle\Entity\Notification;
 use Doctrine\ORM\Mapping as ORM;
+use BrandcodeNL\SymfonyNotificationBundle\Model\UserNotificationInterface;
 
 /**
  * @ORM\Entity(repositoryClass="BrandcodeNL\SymfonyNotificationBundle\Repository\UserNotificationRepository")
  */
-class UserNotification
+class UserNotification implements UserNotificationInterface
 {
 
     /**
@@ -20,7 +21,7 @@ class UserNotification
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\UserNotificationInterface")
+     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\UserInterface")
      */
     private $user;
 
@@ -33,7 +34,7 @@ class UserNotification
     {
         return $this->notification;
     }
-    public function setNotification($notification):self
+    public function setNotification(NotficationInterface $notification):self
     {
         $this->notification = $notification;
         return $this;
@@ -42,7 +43,7 @@ class UserNotification
     {
         return $this->user;
     }
-    public function setUser($user):self
+    public function setUser(UserInterface $user):self
     {
         $this->user = $user;
         return $this;
@@ -51,7 +52,7 @@ class UserNotification
     {
         return $this->readStatus;
     }
-    public function setReadStatus($readStatus): self
+    public function setReadStatus(bool $readStatus): self
     {
         $this->readStatus = $readStatus;
         return $this;
