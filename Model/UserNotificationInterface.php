@@ -8,7 +8,7 @@ interface UserNotificationInterface
 {
     public function getNotification():?NotificationInterface;
    
-    public function setNotification(NotifcationInterface $notification):self;
+    public function setNotification(NotificationInterface $notification):self;
    
     public function getUser();
     
