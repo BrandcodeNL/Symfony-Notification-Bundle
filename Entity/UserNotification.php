@@ -32,7 +32,7 @@ class UserNotification implements UserNotificationInterface
      */
     private $readStatus = false;
 
-    public function getNotification():?Notification
+    public function getNotification():?NotificationInterface
     {
         return $this->notification;
     }
