@@ -36,7 +36,7 @@ class UserNotification implements UserNotificationInterface
     {
         return $this->notification;
     }
-    public function setNotification(NotficationInterface $notification):self
+    public function setNotification(NotficationInterface $notification):UserNotificationInterface
     {
         $this->notification = $notification;
         return $this;
@@ -45,7 +45,7 @@ class UserNotification implements UserNotificationInterface
     {
         return $this->user;
     }
-    public function setUser(UserInterface $user):self
+    public function setUser(UserInterface $user):UserNotificationInterface
     {
         $this->user = $user;
         return $this;
@@ -54,7 +54,7 @@ class UserNotification implements UserNotificationInterface
     {
         return $this->readStatus;
     }
-    public function setReadStatus(bool $readStatus): self
+    public function setReadStatus(bool $readStatus): UserNotificationInterface
     {
         $this->readStatus = $readStatus;
         return $this;
