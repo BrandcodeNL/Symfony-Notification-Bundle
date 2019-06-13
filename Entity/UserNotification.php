@@ -4,8 +4,10 @@
 namespace BrandcodeNL\SymfonyNotificationBundle\Entity;
 
 use BrandcodeNL\SymfonyNotificationBundle\Entity\Notification;
-use Doctrine\ORM\Mapping as ORM;
+use BrandcodeNL\SymfonyNotificationBundle\Model\UserInterface;
+use BrandcodeNL\SymfonyNotificationBundle\Model\NotificationInterface;
 use BrandcodeNL\SymfonyNotificationBundle\Model\UserNotificationInterface;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="BrandcodeNL\SymfonyNotificationBundle\Repository\UserNotificationRepository")
