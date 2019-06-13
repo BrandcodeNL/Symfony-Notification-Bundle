@@ -6,7 +6,7 @@ namespace BrandcodeNL\SymfonyNotificationBundle\Model;
 
 interface UserNotificationInterface
 {
-    public function getNotification():?Notification;
+    public function getNotification():?NotificationInterface;
    
     public function setNotification(NotifcationInterface $notification):self;
    
