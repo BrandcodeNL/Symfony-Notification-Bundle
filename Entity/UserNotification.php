@@ -36,7 +36,7 @@ class UserNotification implements UserNotificationInterface
     {
         return $this->notification;
     }
-    public function setNotification(NotficationInterface $notification):UserNotificationInterface
+    public function setNotification(NotificationInterface $notification):UserNotificationInterface
     {
         $this->notification = $notification;
         return $this;
