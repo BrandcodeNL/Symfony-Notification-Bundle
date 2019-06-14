@@ -17,7 +17,7 @@ class UserNotification implements UserNotificationInterface
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Entity\Notification")
+     * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\NotificationInterface")
      */
     private $notification;
 
