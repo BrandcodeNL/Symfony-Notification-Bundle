@@ -30,7 +30,7 @@ class UserNotification implements UserNotificationInterface
     /**
      * @ORM\Column(type="boolean")
      */
-    private $readStatus = false;
+    private $status = false;
 
     public function getNotification():?NotificationInterface
     {
@@ -50,13 +50,13 @@ class UserNotification implements UserNotificationInterface
         $this->user = $user;
         return $this;
     }
-    public function getReadStatus():?bool
+    public function getStatus():?bool
     {
-        return $this->readStatus;
+        return $this->status;
     }
-    public function setReadStatus(bool $readStatus): UserNotificationInterface
+    public function setStatus(bool $status): UserNotificationInterface
     {
-        $this->readStatus = $readStatus;
+        $this->status = $status;
         return $this;
     }
 }

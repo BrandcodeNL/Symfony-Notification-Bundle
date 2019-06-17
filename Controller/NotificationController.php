@@ -21,7 +21,7 @@ class NotificationController extends AbstractController
         $manager = $this->getDoctrine()->getManager();
         $unread = $manager->getRepository(UserNotification::class)->findUserNotifications($this->getUser(), false);
         foreach ($unread as $notification) {
-            $notification->setReadStatus(true);
+            $notification->setstatus(true);
         }
         $manager->flush();
 

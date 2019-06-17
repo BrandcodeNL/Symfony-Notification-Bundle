@@ -14,7 +14,7 @@ class UserNotificationRepository extends EntityRepository
 
         $notifications
             ->leftJoin("l.notification", 'n')
-            ->andWhere("l.readStatus = :read")
+            ->andWhere("l.status = :read")
             ->andWhere("l.user = :userId")
             ->andWhere("n.startDate < :date")
             ->setParameter("date", new \DateTime())
