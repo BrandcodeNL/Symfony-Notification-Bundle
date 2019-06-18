@@ -18,12 +18,14 @@ class UserNotification implements UserNotificationInterface
     /**
      * @ORM\Id()
      * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\NotificationInterface")
+     * @ORM\JoinColumn(name="notification_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $notification;
 
     /**
      * @ORM\Id()
      * @ORM\ManyToOne(targetEntity="BrandcodeNL\SymfonyNotificationBundle\Model\UserInterface")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $user;
 
