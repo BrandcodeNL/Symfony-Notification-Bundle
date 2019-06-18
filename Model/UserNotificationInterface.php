@@ -14,8 +14,8 @@ interface UserNotificationInterface
     
     public function setUser(UserInterface $user):self;
   
-    public function getstatus():?bool;
+    public function getStatus():?bool;
     
-    public function setstatus(bool $status): self;
+    public function setStatus(bool $status): self;
    
 }
