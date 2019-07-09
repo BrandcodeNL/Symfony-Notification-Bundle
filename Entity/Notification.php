@@ -21,12 +21,12 @@ class Notification implements NotificationInterface
      * @ORM\Column(type="string")
      * @Assert\NotBlank
      */
-    private $title;
+    protected $title;
     /**
      * @ORM\Column(type="string", nullable=true)
      * @Assert\Url
      */
-    private $link;
+    protected $link;
     /**
      * @ORM\Column(type="datetime")
      */
